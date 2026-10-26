@@ -3,437 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="JBKuliner - Fine Dining Kuliner Autentik Khas Jawa dan Bali.">
-  <title>JBKuliner | Fine Dining Khas Jawa & Bali Autentik</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Berkas CSS Terpisah -->
+  <title>JB Kuliner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ==========================================
-       1. HEADER & QUICK RESERVATION BAR
-       ========================================== -->
-  <header class="site-header" id="site-header">
-    <div class="top-nav-wrap">
-      <div class="container nav-container">
-        <!-- Logo Brand: JBKuliner -->
-        <a href="#beranda" class="brand-logo">
-          <div class="brand-icon">
-            <i class="fa-solid fa-utensils"></i>
-          </div>
-          <div class="brand-text">
-            <span class="logo-script">JBKuliner</span>
-            <span class="logo-tag">FINE DINING JAWA & BALI</span>
-          </div>
-        </a>
-
-        <!-- Menu Navigasi Utama -->
-        <nav>
-          <ul class="nav-menu" id="nav-menu">
-            <li><a href="#beranda" class="nav-link active">BERANDA</a></li>
-            <li><a href="#tentang" class="nav-link">TENTANG KAMI</a></li>
-            <li><a href="#menu" class="nav-link">DAFTAR MENU</a></li>
-            <li><a href="#kontak" class="nav-link">RESERVASI</a></li>
-          </ul>
-        </nav>
-
-        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Quick Table Reservation Bar -->
-    <div class="quick-res-bar">
-      <div class="container">
-        <form class="quick-res-form" id="quick-res-form">
-          <div class="res-field">
-            <i class="fa-solid fa-user-group"></i>
-            <select id="quick-guests" required>
-              <option value="2">2 Tamu</option>
-              <option value="3-4">3 - 4 Tamu</option>
-              <option value="5-8">5 - 8 Tamu</option>
-              <option value="VIP">Rombongan VIP</option>
-            </select>
-          </div>
-
-          <div class="res-field">
-            <i class="fa-regular fa-calendar"></i>
-            <input type="date" id="quick-date" required>
-          </div>
-
-          <div class="res-field">
-            <i class="fa-regular fa-clock"></i>
-            <input type="time" id="quick-time" required>
-          </div>
-
-          <button type="submit" class="btn-find-table">
-            Cari Meja <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </form>
-      </div>
+  <!-- Header & Navigasi -->
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">JB Kuliner</h1>
+      <button id="cart-button" class="cart-btn">
+        🛒 <span id="cart-count" class="badge">0</span>
+      </button>
     </div>
   </header>
 
-  <!-- ==========================================
-       2. HERO SECTION
-       ========================================== -->
-  <section class="hero-section" id="beranda">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content-center">
-      <div class="hero-brand-badge">
-        <span class="tagline-gold">Cita Rasa Legendaris Sesuai Daerah Asalnya</span>
-      </div>
-      <h1 class="hero-title-script">JBKuliner</h1>
-      <h2 class="hero-subtitle">JAWA & BALI DINING</h2>
-      <p class="hero-description">
-        Menghadirkan mahakarya kuliner autentik langsung dari daerah asalnya di tanah Jawa dan Bali dengan standar penyajian fine dining berkelas.
-      </p>
-      <div class="hero-actions">
-        <a href="#menu" class="btn btn-gold"><i class="fa-solid fa-bowl-food"></i> Lihat Menu Khas</a>
-        <a href="#kontak" class="btn btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Reservasi Meja</a>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Sajian Khas Nusantara</h2>
+      <p>Nikmati kelezatan masakan otentik dengan resep warisan keluarga.</p>
     </div>
   </section>
 
-  <!-- ==========================================
-       3. TENTANG KAMI SECTION
-       ========================================== -->
-  <section class="about-section section-padding" id="tentang">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image-col">
-          <div class="about-image-frame">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.34.56.jpeg" alt="JBKuliner Fine Dining" id="about-img">
-          </div>
-        </div>
+  <!-- Main Content (Menu) -->
+  <main class="container">
+    <div class="menu-header">
+      <h2>Menu Kami</h2>
+      <input type="text" id="search-input" placeholder="Cari menu... 🔎" class="search-bar">
+    </div>
 
-        <div class="about-text-col">
-          <div class="section-badge-dark">TENTANG JBKULINER</div>
-          <h2 class="section-title-gold">Keaslian Resep Sesuai Asalnya</h2>
-          <p class="about-lead">
-            Setiap hidangan di JBKuliner disiapkan dengan menghormati akar budaya dan daerah asal resep tersebut.
-          </p>
-          <p class="about-text">
-            Mulai dari racikan rempah bumbu genep khas Bali hingga kelembutan rasa manis gurih khas Jawa, kami mendatangkan esensi kuliner asli daerah ke hadapan meja Anda.
-          </p>
-        </div>
-      </div>
+    <!-- Filter Kategori -->
+    <div class="category-filters">
+      <button class="category active" data-category="Semua">Semua</button>
+      <button class="category" data-category="Khas Jawa">Khas Jawa</button>
+      <button class="category" data-category="Khas Bali">Khas Bali</button>
+      <button class="category" data-category="Camilan">Camilan</button>
+      <button class="category" data-category="Minuman">Minuman</button>
+    </div>
+
+    <p id="menu-total" class="menu-total">Memuat menu...</p>
+
+    <!-- Grid Menu -->
+    <div id="menu-grid" class="menu-grid"></div>
+  </main>
+
+  <!-- Reservasi Section -->
+  <section class="reservation-section">
+    <div class="container reservation-container">
+      <h2>Reservasi Meja</h2>
+      <form id="reservation-form" class="reservation-form">
+        <input type="text" id="customer-name" placeholder="Nama Lengkap" required>
+        <input type="number" id="guest-count" placeholder="Jumlah Orang" min="1" required>
+        <select id="table-type">
+          <option value="Indoor">Indoor</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="VIP">VIP</option>
+        </select>
+        <input type="date" id="reservation-date" required>
+        <input type="time" id="reservation-time" required>
+        <textarea id="reservation-note" placeholder="Catatan Tambahan (Opsional)" rows="3"></textarea>
+        <button type="submit" class="btn-primary">Kirim Reservasi</button>
+      </form>
     </div>
   </section>
 
-  <!-- ==========================================
-       4. MENU SPESIAL SECTION (JAWA & BALI)
-       ========================================== -->
-  <section class="menu-section section-padding" id="menu">
+  <!-- Footer -->
+  <footer>
     <div class="container">
-      <div class="section-header">
-        <div class="section-badge-dark">MAHAKARYA KULINER</div>
-        <h2 class="section-title-gold">Menu Spesial Khas Jawa & Bali</h2>
-        <p class="section-subtitle-light">
-          Nikmati hidangan istimewa yang diolah berdasarkan resep turun-temurun dari daerah asalnya.
-        </p>
-      </div>
-
-      <!-- Filter Kategori Menu -->
-      <div class="menu-filter-bar">
-        <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> Semua Menu</button>
-        <button class="filter-btn" data-filter="jawa"><i class="fa-solid fa-utensils"></i> Khas Jawa</button>
-        <button class="filter-btn" data-filter="bali"><i class="fa-solid fa-fire"></i> Khas Bali</button>
-      </div>
-
-      <!-- Grid Menu -->
-      <div class="menu-grid" id="menu-product-grid">
-
-        <!-- ===== MAKANAN & MINUMAN KHAS JAWA ===== -->
-        <article class="menu-card" data-category="jawa">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.34.56.jpeg" alt="Gudeg Jogja Spesial" loading="lazy">
-            <span class="card-badge badge-jawa">Khas Yogyakarta</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Gudeg Jogja Spesial</h3>
-              <span class="product-price">Rp 32.000</span>
-            </div>
-            <p class="product-desc">Resep autentik Yogyakarta: nangka muda dimasak dengan gula aren asli, disajikan lengkap dengan opor ayam, telur, dan krecek pedas.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Gudeg Jogja Spesial', 32000, 'images/WhatsApp Image 2026-10-22 at 08.34.56.jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="jawa">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.34.57.jpeg" alt="Selat Solo" loading="lazy">
-            <span class="card-badge badge-jawa">Khas Surakarta</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Selat Solo Premium</h3>
-              <span class="product-price">Rp 34.000</span>
-            </div>
-            <p class="product-desc">Hidangan bangsawan gaya Surakarta: bistik daging manis gurih, dilengkapi wortel, buncis, kentang, dan telur rebus segar.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Selat Solo Premium', 34000, 'images/WhatsApp Image 2026-10-22 at 08.34.57.jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="jawa">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.34.57 (1).jpeg" alt="Nasi Liwet Ayam Petai" loading="lazy">
-            <span class="card-badge badge-jawa">Khas Jawa Tengah</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Nasi Liwet Ayam Petai</h3>
-              <span class="product-price">Rp 30.000</span>
-            </div>
-            <p class="product-desc">Nasi gurih beraroma rempah dengan taburan teri, petai segar, ayam goreng renyah, tempe, dan sambal terasi khas.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Nasi Liwet Ayam Petai', 30000, 'images/WhatsApp Image 2026-10-22 at 08.34.57 (1).jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="jawa">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.36.59.jpeg" alt="Seblak Ceker Mercon" loading="lazy">
-            <span class="card-badge badge-jawa">Spesial Pedas Jawa</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Seblak Ceker Mercon</h3>
-              <span class="product-price">Rp 25.000</span>
-            </div>
-            <p class="product-desc">Hidangan berkuah pedas membara beraroma kencur segar, dilengkapi ceker empuk, bakso, dan makaroni gurih.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Seblak Ceker Mercon', 25000, 'images/WhatsApp Image 2026-10-22 at 08.36.59.jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="jawa">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.45.38.jpeg" alt="Es Dawet Ayu Banjarnegara" loading="lazy">
-            <span class="card-badge badge-jawa">Minuman Khas Jawa</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Es Dawet Ayu</h3>
-              <span class="product-price">Rp 16.000</span>
-            </div>
-            <p class="product-desc">Minuman khas Banjarnegara: cendol tepung beras wangi pandan disiram santan gurih dan sirup gula aren murni.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Es Dawet Ayu', 16000, 'images/WhatsApp Image 2026-10-22 at 08.45.38.jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="jawa">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.45.39.jpeg" alt="Wedang Ronde Khas Jawa" loading="lazy">
-            <span class="card-badge badge-jawa">Minuman Khas Jawa</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Wedang Ronde Hangat</h3>
-              <span class="product-price">Rp 18.000</span>
-            </div>
-            <p class="product-desc">Minuman penghangat khas Jawa: kuah jahe wangi dengan bola-bola ketan kenyal berisi kacang tumbuk manis dan kolang-kaling.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Wedang Ronde Hangat', 18000, 'images/WhatsApp Image 2026-10-22 at 08.45.39.jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <!-- ===== MAKANAN & MINUMAN KHAS BALI ===== -->
-        <article class="menu-card" data-category="bali">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.34.56 (2).jpeg" alt="Ayam Betutu Bali" loading="lazy">
-            <span class="card-badge badge-bali">Khas Gianyar Bali</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Ayam Betutu Bumbu Genep</h3>
-              <span class="product-price">Rp 42.000</span>
-            </div>
-            <p class="product-desc">Warisan kuliner Gianyar: ayam utuh dilumuri bumbu genep rempah melimpah yang dipanggang hingga meresap sempurna.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Ayam Betutu Bumbu Genep', 42000, 'images/WhatsApp Image 2026-10-22 at 08.34.56 (2).jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="bali">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.34.56 (1).jpeg" alt="Sate Lilit Bali" loading="lazy">
-            <span class="card-badge badge-bali">Khas Karangasem Bali</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Sate Lilit Serai Bali</h3>
-              <span class="product-price">Rp 30.000</span>
-            </div>
-            <p class="product-desc">Daging cincang gurih berpadu dengan rempah dan parutan kelapa, dililit pada batang serai wangi disajikan dengan sambal matah.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Sate Lilit Serai Bali', 30000, 'images/WhatsApp Image 2026-10-22 at 08.34.56 (1).jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="bali">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.46.14.jpeg" alt="Es Kuwut Melon Bali" loading="lazy">
-            <span class="card-badge badge-bali">Minuman Khas Bali</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Es Kuwut Melon</h3>
-              <span class="product-price">Rp 18.000</span>
-            </div>
-            <p class="product-desc">Minuman penyegar khas Bali: perpaduan serutan kelapa muda, melon manis, biji selasih, dan perasan jeruk nipis yang menyegarkan.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Es Kuwut Melon', 18000, 'images/WhatsApp Image 2026-10-22 at 08.46.14.jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-        <article class="menu-card" data-category="bali">
-          <div class="card-media">
-            <img src="images/WhatsApp Image 2026-10-22 at 08.45.39 (1).jpeg" alt="Es Daluman / Cincau Hijau Bali" loading="lazy">
-            <span class="card-badge badge-bali">Minuman Khas Bali</span>
-          </div>
-          <div class="card-body">
-            <div class="card-header-flex">
-              <h3 class="product-title">Es Cincau Hijau Bali</h3>
-              <span class="product-price">Rp 15.000</span>
-            </div>
-            <p class="product-desc">Minuman penyegar khas Bali (Es Daluman): cincau hijau alami yang lembut, disiram santan gurih segar dan gula aren manis.</p>
-            <button class="btn-order-gold" onclick="openOrderModal('Es Cincau Hijau Bali', 15000, 'images/WhatsApp Image 2026-10-22 at 08.45.39 (1).jpeg')">
-              <i class="fa-solid fa-cart-shopping"></i> Pesan Menu
-            </button>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       5. KONTAK & RESERVASI SECTION
-       ========================================== -->
-  <section class="contact-section section-padding" id="kontak">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="section-badge-dark">HUBUNGI KAMI</div>
-          <h2 class="section-title-gold">Lokasi & Reservasi Meja</h2>
-          <p class="contact-desc">Silakan lakukan pemesanan tempat untuk menikmati kelezatan kuliner asli Jawa dan Bali di JBKuliner.</p>
-
-          <div class="contact-detail-item">
-            <i class="fa-solid fa-location-dot gold-icon"></i>
-            <div>
-              <h4>Alamat</h4>
-              <p>Jl. Rempah Nusantara No. 45, Kebayoran Baru, Jakarta Selatan</p>
-            </div>
-          </div>
-
-          <div class="contact-detail-item">
-            <i class="fa-solid fa-phone gold-icon"></i>
-            <div>
-              <h4>WhatsApp & Telepon</h4>
-              <p>+62 812-3456-7890</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="reservation-card-dark">
-          <h3>Formulir Reservasi Meja</h3>
-          <form id="reservation-form">
-            <div class="form-group">
-              <label>Nama Lengkap *</label>
-              <input type="text" id="res-name" placeholder="Nama Anda" required>
-            </div>
-            <div class="form-group">
-              <label>Nomor WhatsApp *</label>
-              <input type="tel" id="res-phone" placeholder="08123456789" required>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Tanggal *</label>
-                <input type="date" id="res-date" required>
-              </div>
-              <div class="form-group">
-                <label>Jam *</label>
-                <input type="time" id="res-time" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Jumlah Tamu *</label>
-              <select id="res-guests" required>
-                <option value="2 Orang">2 Orang</option>
-                <option value="3-5 Orang">3 - 5 Orang</option>
-                <option value="6+ Orang">6+ Orang (Group)</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-gold btn-full">Kirim Konfirmasi Reservasi</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 <strong>JBKuliner</strong>. All Rights Reserved. Fine Dining Jawa & Bali Experience.</p>
+      <p>&copy; <span id="year"></span> JB Kuliner. Dibuat dengan sepenuh hati.</p>
     </div>
   </footer>
 
-  <!-- MODAL PESAN MENU -->
-  <div class="modal-overlay" id="orderModal">
-    <div class="modal-content-dark">
-      <button class="modal-close-btn" onclick="closeOrderModal()"><i class="fa-solid fa-xmark"></i></button>
-      <h3 id="modalProductName">Nama Menu</h3>
-      <div class="modal-preview">
-        <img src="" id="modalProductImg" alt="Preview">
-        <span id="modalProductPrice" class="gold-text">Rp 0</span>
-      </div>
-      <div class="qty-control-dark">
-        <span>Jumlah Porsi:</span>
-        <div class="qty-btns">
-          <button type="button" onclick="changeModalQty(-1)">-</button>
-          <input type="text" id="modalQtyInput" value="1" readonly>
-          <button type="button" onclick="changeModalQty(1)">+</button>
-        </div>
-      </div>
-      <div class="total-row">
-        <span>Total:</span>
-        <span id="modalTotalPrice" class="gold-text">Rp 0</span>
-      </div>
-      <button type="button" class="btn btn-whatsapp btn-full" onclick="sendOrderViaWhatsApp()">
-        <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
-      </button>
+  <!-- Sidebar Keranjang -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h2>Keranjang Pesanan</h2>
+      <button id="close-cart" class="close-btn">&times;</button>
     </div>
-  </div>
+    <div id="cart-items" class="cart-items">
+      <!-- Item keranjang masuk ke sini -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-wrap">
+        <span>Total:</span>
+        <span id="cart-total" class="cart-total-price">Rp 0</span>
+      </div>
+      <button id="checkout-button" class="btn-primary w-100">Pesan via WhatsApp</button>
+    </div>
+  </aside>
 
-  <!-- TOAST NOTIFIKASI -->
-  <div class="toast-msg" id="toastMsg">
-    <span id="toastText">Pemberitahuan</span>
-  </div>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
 
-  <!-- Berkas JavaScript Terpisah -->
+  <!-- Load File JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
